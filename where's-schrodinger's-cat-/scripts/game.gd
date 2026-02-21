@@ -52,6 +52,7 @@ func boxClicked(game_box,id):
 		if (game_box == winning_box_node):
 			await game_box.open_box_animation()
 			game_box.cat_hehe()
+			AudioController.play_cat_meow()
 			boxSelected = true
 			winStatuslabel.text = "Nice Job!"
 			points += 1
@@ -85,7 +86,7 @@ func swap_boxes(col_a: int, col_b: int):
 	# 3. Physically move them in the game world
 	# We use a Tween to make it look smooth instead of "teleporting"
 	var tween = create_tween().set_parallel(true)
-	
+	AudioController.play_swoosh()
 	tween.tween_property(first_box, "position:x", column_positions[col_b], duration)
 	tween.tween_property(second_box, "position:x", column_positions[col_a], duration)
 	# Wait for the swap to finish before allowing more clicks

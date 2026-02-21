@@ -10,3 +10,6 @@ bus = &"Music"
 
 [node name="SFXController" type="AudioStreamPlayer2D" parent="." unique_id=867369583]
 bus = &"Sound effects"
+
+[node name="swooshController" type="AudioStreamPlayer2D" parent="." unique_id=637879465]
+bus = &"swoosh bus"
