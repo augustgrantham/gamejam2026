@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cycfpl4xogt5o"]
+
+[ext_resource type="Script" uid="uid://d12482yhkto6s" path="res://credits.gd" id="1_nm7lk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c1t8d"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=311586421]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm7lk")
+
+[node name="Label" type="Label" parent="." unique_id=1061286380]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.98300004
+anchor_bottom = 1.0
+offset_right = 32.639893
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "these are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the game"
+label_settings = SubResource("LabelSettings_c1t8d")
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=493215614]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021000002
+anchor_top = 0.933
+anchor_right = 0.087000005
+anchor_bottom = 0.9620001
+offset_left = -0.3200035
+offset_top = 0.35998535
+offset_right = -1.0400085
+offset_bottom = 0.039916992
+text = "Back To Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
