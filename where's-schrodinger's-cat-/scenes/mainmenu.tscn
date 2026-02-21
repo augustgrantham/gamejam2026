@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
 [ext_resource type="Texture2D" uid="uid://bkc7oss8qkd70" path="res://assets/new assets/start-button.png" id="2_r3g3c"]
+[ext_resource type="Texture2D" uid="uid://cglgt5g6kg4h6" path="res://assets/new assets/background-main-menu.jpg" id="2_s5g8n"]
+[ext_resource type="Texture2D" uid="uid://b5kip5cboprcq" path="res://assets/new assets/credits-button.png" id="3_3vvtq"]
+[ext_resource type="Texture2D" uid="uid://ddbfqxkxkew0r" path="res://assets/new assets/title-new.png" id="3_7yvfd"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="3_wgsso"]
 
 [node name="menuNode" type="Control" unique_id=653461740]
@@ -16,15 +19,29 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_cmhrf")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=386295470]
+[node name="background" type="TextureRect" parent="." unique_id=1487199496]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1077.0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.3676887, 1.3676887)
+texture = ExtResource("2_s5g8n")
+
+[node name="titleCard" type="TextureRect" parent="." unique_id=1908453727]
+layout_mode = 0
+offset_left = 362.0
+offset_top = -244.0
+offset_right = 862.0
+offset_bottom = 256.0
+scale = Vector2(2.565177, 2.565177)
+texture = ExtResource("3_7yvfd")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=551552352]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1073.0
+offset_left = -415.99997
+offset_top = -48.999992
+offset_right = 1504.0
+offset_bottom = 1024.0
+scale = Vector2(1.42488, 1.42488)
 
 [node name="Button" type="Button" parent="CenterContainer" unique_id=135161836]
 clip_contents = true
@@ -46,17 +63,21 @@ anchor_left = 0.43300003
 anchor_top = 0.611
 anchor_right = 0.55600005
 anchor_bottom = 0.68600005
-offset_left = 8.639954
-offset_top = 0.39697266
-offset_right = 0.4798584
-offset_bottom = -5.078064
+offset_left = -40.360046
+offset_top = 296.39697
+offset_right = -48.52014
+offset_bottom = 290.92194
+scale = Vector2(1.42488, 1.42488)
 
 [node name="Button" type="Button" parent="Settings" unique_id=293213626]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
-text = "credits
-"
+flat = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Settings/Button" unique_id=1198437685]
+position = Vector2(71.99999, 32.999985)
+scale = Vector2(0.33724993, 0.33724993)
+texture = ExtResource("3_3vvtq")
 
 [node name="MusicStream" type="AudioStreamPlayer2D" parent="." unique_id=135042541]
 stream = ExtResource("3_wgsso")

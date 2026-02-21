@@ -51,7 +51,7 @@ func boxClicked(game_box,id):
 			await game_box.open_box_animation() 
 			game_box.empty_box_animation()
 			boxSelected = true
-			winStatuslabel.text = "Nice Try!"
+			winStatuslabel.text = "Try again!"
 			await get_tree().create_timer(2.0).timeout
 			print("you lost dummy")
 			get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
