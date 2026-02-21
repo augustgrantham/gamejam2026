@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cbgvmy6uch54h"]
+
+[ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
+[ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="3_wgsso"]
+
+[node name="menuNode" type="Control" unique_id=653461740]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_cmhrf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=386295470]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1077.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=551552352]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1073.0
+
+[node name="Button" type="Button" parent="CenterContainer" unique_id=135161836]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "Start"
+
+[node name="Settings" type="CenterContainer" parent="." unique_id=659670482]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43300003
+anchor_top = 0.611
+anchor_right = 0.55600005
+anchor_bottom = 0.68600005
+offset_left = 8.639954
+offset_top = 0.39697266
+offset_right = 0.4798584
+offset_bottom = -5.078064
+
+[node name="Button" type="Button" parent="Settings" unique_id=293213626]
+layout_mode = 2
+text = "credits
+"
+
+[node name="MusicStream" type="AudioStreamPlayer2D" parent="." unique_id=135042541]
+stream = ExtResource("3_wgsso")
+bus = &"Music"
+
+[node name="sfxStream" type="AudioStreamPlayer2D" parent="." unique_id=1370590478]
+bus = &"Sound effects"
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Settings/Button" to="." method="_on_credits_pressed"]
