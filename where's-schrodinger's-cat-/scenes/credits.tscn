@@ -3,6 +3,22 @@
 [ext_resource type="Script" uid="uid://d12482yhkto6s" path="res://scripts/credits.gd" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="2_c1t8d"]
 
+[sub_resource type="FontFile" id="FontFile_2ckv8"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
 [sub_resource type="LabelSettings" id="LabelSettings_c1t8d"]
 font_color = Color(0, 0, 0, 1)
 
@@ -18,16 +34,34 @@ script = ExtResource("1_nm7lk")
 [node name="Label" type="Label" parent="." unique_id=1061286380]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.98300004
-anchor_bottom = 1.0
-offset_right = 32.639893
+anchor_left = 0.17500001
+anchor_top = 0.252
+anchor_right = 0.73700005
+anchor_bottom = 0.637
+offset_left = -3.0517578e-05
+offset_top = 7.8399963
+offset_right = 0.95996094
+offset_bottom = 0.039978027
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0.91764706, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
-text = "these are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the gamethese are the credits to the game"
+theme_override_constants/line_spacing = 6
+theme_override_fonts/font = SubResource("FontFile_2ckv8")
+theme_override_font_sizes/font_size = 28
+text = "Menu Click ~ menu click 2 by Tissman -- https://freesound.org/s/531851/ -- License: Creative Commons 0
+
+Menu Music ~ duppyElectro02_120bpm.wav by djduppy -- https://freesound.org/s/23559/ -- License: Attribution 4.0
+
+Game Music ~ Upbeat Percussion Loop by wellsdesirae -- https://freesound.org/s/845635/ -- License: Attribution NonCommercial 4.0
+
+Cat Meow~ Cat meowing Produced by ZapSplat #
+
+Box Opening~ Small pouch velcro rip 13 Produced by ZapSplat Standard License Agreement
+
+Box moving~ MXL993_Yarstick_Swoosh_4.wav by Wdfourtee https://freesound.org/s/192050/ -- License: Creative Commons 0"
 label_settings = SubResource("LabelSettings_c1t8d")
-autowrap_mode = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Button" type="Button" parent="." unique_id=493215614]
 layout_mode = 1
