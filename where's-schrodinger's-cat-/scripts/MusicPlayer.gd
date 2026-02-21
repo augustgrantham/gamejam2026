@@ -4,7 +4,7 @@ extends Node
 var game_music = preload("res://sounds/845635__wellsdesirae__upbeat-percussion-loop.wav")
 var menu_music = preload("res://sounds/23559__djduppy__duppyelectro02_120bpm.wav")
 var box_opening_sfx = preload("res://sounds/zapsplat_foley_pouch_velcro_rip_013_97211.mp3")
-var meow = preload("res://sounds/animal_cat_meow.mp3")
+var meow = preload("res://sounds/Cat1.mp3")
 var swoosh = preload("res://sounds/woosh.wav")
 @onready var musicPlayer = $MusicController
 @onready var SFXPlayer = $SFXController
