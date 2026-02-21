@@ -46,6 +46,7 @@ func _on_box_3_box_clicked(id: Variant) -> void:
 	boxClicked(box3,3)
 
 func boxClicked(game_box,id):
+	# makes sure you haven't already picked one this round
 	if(!boxSelected):
 		AudioController.play_box_opening()
 		if (game_box == winning_box_node):
@@ -64,6 +65,7 @@ func boxClicked(game_box,id):
 		else:
 			await game_box.open_box_animation() 
 			game_box.empty_box_animation()
+			winning_box_node.cat_hehe()
 			boxSelected = true
 			winStatuslabel.text = "Try again!"
 			await get_tree().create_timer(2.0).timeout
