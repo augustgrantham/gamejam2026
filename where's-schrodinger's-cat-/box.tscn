@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ckyqmofd2gq6h"]
+
+[ext_resource type="Texture2D" uid="uid://cod60ft6xifuj" path="res://icon.svg" id="1_g2tbl"]
+[ext_resource type="Script" uid="uid://dee4cg63lrql7" path="res://box.gd" id="1_oq5cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq5cr"]
+size = Vector2(132, 130)
+
+[node name="Node2D" type="Node2D" unique_id=1222013045]
+script = ExtResource("1_oq5cr")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=652836368]
+position = Vector2(0, -3)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=933142590]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_oq5cr")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CharacterBody2D" unique_id=263170108]
+texture = ExtResource("1_g2tbl")
+
+[connection signal="input_event" from="CharacterBody2D" to="." method="_on_character_body_2d_input_event"]

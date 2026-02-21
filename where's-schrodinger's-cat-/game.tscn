@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://dihir0g61vnlc"]
 
-[ext_resource type="Texture2D" uid="uid://cod60ft6xifuj" path="res://icon.svg" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://b6me3uidsimna" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ckyqmofd2gq6h" path="res://box.tscn" id="2_e2o6t"]
 
 [node name="Node2D" type="Node2D" unique_id=1786731713]
+script = ExtResource("1_80nbo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1734760689]
 
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=2005774250]
-texture = ExtResource("1_80nbo")
+[node name="box1" parent="." unique_id=1222013045 instance=ExtResource("2_e2o6t")]
+position = Vector2(-295, 2)
+
+[node name="box2" parent="." unique_id=405739190 instance=ExtResource("2_e2o6t")]
+position = Vector2(0, 2)
+
+[node name="box3" parent="." unique_id=184713389 instance=ExtResource("2_e2o6t")]
+position = Vector2(295, 0)
+
+[connection signal="box_clicked" from="box1" to="." method="_on_box_1_box_clicked"]
+[connection signal="box_clicked" from="box2" to="." method="_on_box_2_box_clicked"]
+[connection signal="box_clicked" from="box3" to="." method="_on_box_3_box_clicked"]
