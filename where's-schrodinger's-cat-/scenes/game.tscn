@@ -35,15 +35,6 @@ text = "0
 "
 label_settings = SubResource("LabelSettings_e2o6t")
 
-[node name="winLabel" type="Label" parent="CanvasLayer" unique_id=273359666]
-z_index = 2
-offset_left = -147.0
-offset_top = -391.0
-offset_right = 145.0
-offset_bottom = -214.0
-label_settings = SubResource("LabelSettings_e2o6t")
-horizontal_alignment = 1
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1734760689]
 
 [node name="box1" parent="." unique_id=1222013045 instance=ExtResource("2_e2o6t")]
