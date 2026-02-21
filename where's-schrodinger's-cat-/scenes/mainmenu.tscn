@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbgvmy6uch54h"]
 
 [ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
+[ext_resource type="Texture2D" uid="uid://bkc7oss8qkd70" path="res://assets/new assets/start-button.png" id="2_r3g3c"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="3_wgsso"]
 
 [node name="menuNode" type="Control" unique_id=653461740]
@@ -26,9 +27,17 @@ offset_right = 1920.0
 offset_bottom = 1073.0
 
 [node name="Button" type="Button" parent="CenterContainer" unique_id=135161836]
-custom_minimum_size = Vector2(300, 100)
+clip_contents = true
+custom_minimum_size = Vector2(500, 300)
 layout_mode = 2
-text = "Start"
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Button" unique_id=1732155530]
+position = Vector2(243, 215.00003)
+scale = Vector2(0.8980001, 0.8980001)
+texture = ExtResource("2_r3g3c")
 
 [node name="Settings" type="CenterContainer" parent="." unique_id=659670482]
 layout_mode = 1
@@ -46,6 +55,8 @@ offset_bottom = -5.078064
 layout_mode = 2
 text = "credits
 "
+
+[node name="Sprite2D" type="Sprite2D" parent="Settings/Button" unique_id=1198437685]
 
 [node name="MusicStream" type="AudioStreamPlayer2D" parent="." unique_id=135042541]
 stream = ExtResource("3_wgsso")
