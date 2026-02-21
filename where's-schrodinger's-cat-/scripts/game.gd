@@ -1,6 +1,6 @@
 extends Node2D
 
-var box_scene = preload("res://Box.tscn")
+var box_scene = preload("res://scenes/box.tscn")
 var points = 0
 var boxWithCat = 0
 @onready var winStatuslabel = $CanvasLayer/winLabel
@@ -38,4 +38,4 @@ func boxClicked(id):
 		winStatuslabel.text = "Nice Try!"
 		await get_tree().create_timer(2.0).timeout
 		print("you lost dummy")
-		get_tree().change_scene_to_file("res://mainmenu.tscn")
+		get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")

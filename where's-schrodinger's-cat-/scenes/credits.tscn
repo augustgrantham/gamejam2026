@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cycfpl4xogt5o"]
 
-[ext_resource type="Script" uid="uid://d12482yhkto6s" path="res://credits.gd" id="1_nm7lk"]
+[ext_resource type="Script" uid="uid://d12482yhkto6s" path="res://scripts/credits.gd" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://531851__tissman__menu-click-2.ogg" id="2_c1t8d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c1t8d"]

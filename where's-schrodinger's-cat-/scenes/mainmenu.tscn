@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbgvmy6uch54h"]
 
 [ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
-[ext_resource type="Script" uid="uid://dnrqokyjh83qk" path="res://MMsettings.gd" id="2_d2nv2"]
+[ext_resource type="Script" uid="uid://dnrqokyjh83qk" path="res://scripts/MMsettings.gd" id="2_d2nv2"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://531851__tissman__menu-click-2.ogg" id="3_wgsso"]
 
 [node name="menuNode" type="Control" unique_id=653461740]
