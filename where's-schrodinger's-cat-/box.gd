@@ -13,4 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_character_body_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	box_clicked.emit(box_id)
+	if event is InputEventMouseButton:
+		# Check if it's the left mouse button AND it was just pressed (not released)
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			box_clicked.emit(box_id)
