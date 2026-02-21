@@ -1,7 +1,6 @@
-[gd_scene format=3 uid="uid://cbgvmy6uch54h"]
+[gd_scene format=3 uid="uid://dui32q6wic5ux"]
 
 [ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
-[ext_resource type="Script" path="res://scripts/MMsettings.gd" id="2_d2nv2"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="3_wgsso"]
 
 [node name="menuNode" type="Control" unique_id=653461740]
@@ -42,7 +41,6 @@ offset_left = 8.639954
 offset_top = 0.39697266
 offset_right = 0.4798584
 offset_bottom = -5.078064
-script = ExtResource("2_d2nv2")
 
 [node name="Button" type="Button" parent="Settings" unique_id=293213626]
 layout_mode = 2
