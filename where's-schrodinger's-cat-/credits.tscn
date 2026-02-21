@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cycfpl4xogt5o"]
 
 [ext_resource type="Script" uid="uid://d12482yhkto6s" path="res://credits.gd" id="1_nm7lk"]
+[ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://531851__tissman__menu-click-2.ogg" id="2_c1t8d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c1t8d"]
 font_color = Color(0, 0, 0, 1)
@@ -40,5 +41,8 @@ offset_top = 0.35998535
 offset_right = -1.0400085
 offset_bottom = 0.039916992
 text = "Back To Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=244929259]
+stream = ExtResource("2_c1t8d")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
 [ext_resource type="Script" uid="uid://dnrqokyjh83qk" path="res://MMsettings.gd" id="2_d2nv2"]
+[ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://531851__tissman__menu-click-2.ogg" id="3_wgsso"]
 
 [node name="menuNode" type="Control" unique_id=653461740]
 layout_mode = 3
@@ -45,7 +46,11 @@ script = ExtResource("2_d2nv2")
 
 [node name="Button" type="Button" parent="Settings" unique_id=293213626]
 layout_mode = 2
-text = "Setting"
+text = "credits
+"
 
-[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Settings/Button" to="Settings" method="_on_button_pressed"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=135042541]
+stream = ExtResource("3_wgsso")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Settings/Button" to="." method="_on_credits_pressed"]
