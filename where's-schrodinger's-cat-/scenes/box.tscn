@@ -1,10 +1,57 @@
 [gd_scene format=3 uid="uid://ckyqmofd2gq6h"]
 
-[ext_resource type="Texture2D" uid="uid://cod60ft6xifuj" path="res://icon.svg" id="1_g2tbl"]
 [ext_resource type="Script" uid="uid://dee4cg63lrql7" path="res://scripts/box.gd" id="1_oq5cr"]
+[ext_resource type="Texture2D" uid="uid://bwegtw2lsk4wt" path="res://assets/new assets/box.png" id="2_ks2v0"]
+[ext_resource type="Texture2D" uid="uid://nvs0hmex8ged" path="res://assets/new assets/box-open.png" id="3_brpd5"]
+[ext_resource type="Texture2D" uid="uid://0i6m6wq1ckp5" path="res://assets/new assets/cat.png" id="4_ry43h"]
+[ext_resource type="Texture2D" uid="uid://oin40kmfxk0k" path="res://assets/new assets/try-again-button.png" id="5_dijgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq5cr"]
 size = Vector2(132, 130)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_faous"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ks2v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_brpd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_brpd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_brpd5")
+}],
+"loop": false,
+"name": &"box_opening",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ry43h")
+}],
+"loop": true,
+"name": &"cat!",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ks2v0")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dijgj")
+}],
+"loop": true,
+"name": &"empty_box",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1222013045]
 script = ExtResource("1_oq5cr")
@@ -17,7 +64,8 @@ input_pickable = true
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_oq5cr")
 
-[node name="Sprite2D3" type="Sprite2D" parent="CharacterBody2D" unique_id=263170108]
-texture = ExtResource("1_g2tbl")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1548334732]
+sprite_frames = SubResource("SpriteFrames_faous")
+animation = &"empty_box"
 
 [connection signal="input_event" from="CharacterBody2D" to="." method="_on_character_body_2d_input_event"]

@@ -47,13 +47,13 @@ horizontal_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1734760689]
 
 [node name="box1" parent="." unique_id=1222013045 instance=ExtResource("2_e2o6t")]
-position = Vector2(-295, 2)
+position = Vector2(-549, -1)
 
 [node name="box2" parent="." unique_id=405739190 instance=ExtResource("2_e2o6t")]
 position = Vector2(0, 2)
 
 [node name="box3" parent="." unique_id=184713389 instance=ExtResource("2_e2o6t")]
-position = Vector2(295, 0)
+position = Vector2(605, 2)
 
 [connection signal="box_clicked" from="box1" to="." method="_on_box_1_box_clicked"]
 [connection signal="box_clicked" from="box2" to="." method="_on_box_2_box_clicked"]
