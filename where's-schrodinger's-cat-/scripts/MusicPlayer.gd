@@ -1,8 +1,8 @@
 extends AudioStreamPlayer
 
 # Make sure these names match your FileSystem exactly!
-var game_music = preload("res://845635__wellsdesirae__upbeat-percussion-loop.wav")
-var menu_music = preload("res://23559__djduppy__duppyelectro02_120bpm.wav")
+var game_music = preload("res://sounds/845635__wellsdesirae__upbeat-percussion-loop.wav")
+var menu_music = preload("res://sounds/23559__djduppy__duppyelectro02_120bpm.wav")
 
 func play_menu():
 	if stream == menu_music: 
