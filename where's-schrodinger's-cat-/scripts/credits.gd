@@ -12,4 +12,4 @@ func _on_button_pressed():
 	await get_tree().create_timer(0.1).timeout
 	
 	# 3. Change the scene
-	get_tree().change_scene_to_file("res://mainmenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
