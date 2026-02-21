@@ -1,11 +1,11 @@
 extends Control
-@onready var click_sound = $AudioStreamPlayer2D
+@onready var click_sound = $sfxStream
 func _ready():
-	MusicPlayer.play_menu()
+	AudioController.play_menu()
 # This handles the Start Button
 func _on_start_pressed():
 	click_sound.play()
-	MusicPlayer.play_game() # Switches music to game track
+	AudioController.play_game() # Switches music to game track
 	await get_tree().create_timer(0.2).timeout
 	get_tree().change_scene_to_file("res://scenes/game.tscn") # MUST have () after get_tree
 

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bf6xeerbm8b3r"]
+
+[ext_resource type="Script" uid="uid://d0erwnh3qoltw" path="res://scripts/MusicPlayer.gd" id="1_41o6r"]
+
+[node name="AudioController" type="Node" unique_id=1910027257]
+script = ExtResource("1_41o6r")
+
+[node name="MusicController" type="AudioStreamPlayer2D" parent="." unique_id=351015946]
+bus = &"Music"
+
+[node name="SFXController" type="AudioStreamPlayer2D" parent="." unique_id=867369583]
+bus = &"Sound effects"

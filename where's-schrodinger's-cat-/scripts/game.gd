@@ -29,6 +29,7 @@ func _on_box_3_box_clicked(id: Variant) -> void:
 
 func boxClicked(id):
 	if(!boxSelected):
+		AudioController.play_box_opening()
 		if (id == boxWithCat):
 			boxSelected = true
 			winStatuslabel.text = "Nice Job!"
@@ -39,6 +40,7 @@ func boxClicked(id):
 			winStatuslabel.text = ""
 			startRound()
 		else:
+			boxSelected = true
 			winStatuslabel.text = "Nice Try!"
 			await get_tree().create_timer(2.0).timeout
 			print("you lost dummy")
