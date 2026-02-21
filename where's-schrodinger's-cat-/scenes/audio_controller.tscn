@@ -12,4 +12,5 @@ bus = &"Music"
 bus = &"Sound effects"
 
 [node name="swooshController" type="AudioStreamPlayer2D" parent="." unique_id=637879465]
+volume_db = 9.732
 bus = &"swoosh bus"

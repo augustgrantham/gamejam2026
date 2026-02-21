@@ -6,7 +6,8 @@ var boxWithCat = 0
 var boxSelected = false
 var column_positions = [-550, 0, 550]
 var round = 1
-var duration = 0.75
+var duration = 0.8
+
 @onready var winStatuslabel = $CanvasLayer/winLabel
 @onready var scoreLabel = $CanvasLayer/scoreLabel
 @onready var box1 = $'box1'
@@ -61,7 +62,7 @@ func boxClicked(game_box,id):
 			await get_tree().create_timer(2.0).timeout
 			winStatuslabel.text = ""
 			round += 1
-			duration -= 0.1
+			duration += 0.2
 			startRound()
 		else:
 			await game_box.open_box_animation() 
@@ -75,6 +76,7 @@ func boxClicked(game_box,id):
 
 # Gemini generated syntax for tween
 func swap_boxes(col_a: int, col_b: int):
+	var speed = (1/duration)
 	# 1. Identify the boxes we are moving
 	var first_box = boxes[col_a]
 	var second_box = boxes[col_b]
@@ -87,8 +89,8 @@ func swap_boxes(col_a: int, col_b: int):
 	# We use a Tween to make it look smooth instead of "teleporting"
 	var tween = create_tween().set_parallel(true)
 	AudioController.play_swoosh()
-	tween.tween_property(first_box, "position:x", column_positions[col_b], duration)
-	tween.tween_property(second_box, "position:x", column_positions[col_a], duration)
+	tween.tween_property(first_box, "position:x", column_positions[col_b], speed)
+	tween.tween_property(second_box, "position:x", column_positions[col_a], speed)
 	# Wait for the swap to finish before allowing more clicks
 	await tween.finished
 func showCat(box):
