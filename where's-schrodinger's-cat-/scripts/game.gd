@@ -16,6 +16,7 @@ var duration = 0.8
 @onready var boxes = [box1,box2,box3]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	boxSelected = true
 	startRound()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,13 +24,13 @@ func _process(delta: float) -> void:
 	pass
 
 func startRound():
+	boxSelected = true
 	box1.closed()
 	box2.closed()
 	box3.closed()
 	boxWithCat = randi_range(0,2)
 	winning_box_node = boxes[boxWithCat]
 	await showCat(boxes[boxWithCat])
-	boxSelected = false
 	for i in range(0,round):
 		var boxToSwap1 = randi_range(0,2)
 		var boxToSwap2 = randi_range(0,2)
@@ -37,6 +38,8 @@ func startRound():
 			boxToSwap2 = randi_range(0,2)
 		await swap_boxes(boxToSwap1,boxToSwap2)
 	print(boxWithCat)
+	await get_tree().create_timer(1)
+	boxSelected = false
 func _on_box_1_box_clicked(id: Variant) -> void:
 	boxClicked(box1,1)
 
