@@ -8,6 +8,7 @@ var column_positions = [-550, 0, 550]
 var round = 0
 var duration = 0.8
 var otherColors = 1
+var cat = 0
 @onready var scoreLabel = $CanvasLayer/scoreLabel
 @onready var box1 = $CanvasLayer/box1
 @onready var box2 = $CanvasLayer/box2
@@ -24,9 +25,11 @@ func _process(delta: float) -> void:
 	pass
 
 func startRound():
+	cat = randi_range(1,4)
 	round += 1
 	if(round > 5):
-		otherColors -= .1
+		if(round % 2 != 0):
+			otherColors -= .05
 	background.self_modulate = Color(1,otherColors,otherColors)
 	boxSelected = true
 	box1.closed()
@@ -34,7 +37,7 @@ func startRound():
 	box3.closed()
 	boxWithCat = randi_range(0,2)
 	winning_box_node = boxes[boxWithCat]
-	await showCat(boxes[boxWithCat])
+	await showCat(boxes[boxWithCat], cat)
 	for i in range(0,round):
 		var boxToSwap1 = randi_range(0,2)
 		var boxToSwap2 = randi_range(0,2)
@@ -64,7 +67,7 @@ func boxClicked(game_box,id):
 		AudioController.play_box_opening()
 		if (game_box == winning_box_node):
 			await game_box.open_box_animation()
-			game_box.cat_hehe()
+			game_box.cat_hehe(cat)
 			AudioController.play_cat_meow()
 			boxSelected = true
 			points += 1
@@ -77,7 +80,7 @@ func boxClicked(game_box,id):
 			boxSelected = true
 			await game_box.open_box_animation() 
 			game_box.empty_box_animation()
-			winning_box_node.cat_hehe()
+			winning_box_node.cat_hehe(cat)
 			boxSelected = true
 			if(points > AudioController.get_highscore()):
 				AudioController.set_highscore(points)
@@ -104,8 +107,8 @@ func swap_boxes(col_a: int, col_b: int):
 	tween.tween_property(second_box, "position:x", column_positions[col_a], speed)
 	# Wait for the swap to finish before allowing more clicks
 	await tween.finished
-func showCat(box):
-	box.cat_hehe()
+func showCat(box, cat):
+	box.cat_hehe(cat)
 	await get_tree().create_timer(1.5).timeout 
 	box.closed()
 	await get_tree().create_timer(0.5).timeout 

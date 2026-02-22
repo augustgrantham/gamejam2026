@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://nvs0hmex8ged" path="res://assets/new assets/box-open.png" id="3_brpd5"]
 [ext_resource type="Texture2D" uid="uid://0i6m6wq1ckp5" path="res://assets/new assets/cat.png" id="4_ry43h"]
 [ext_resource type="Texture2D" uid="uid://oin40kmfxk0k" path="res://assets/new assets/try-again-button.png" id="5_dijgj"]
+[ext_resource type="Texture2D" uid="uid://dxwylgywkchky" path="res://assets/new assets/cat2.png" id="5_faous"]
+[ext_resource type="Texture2D" uid="uid://c03qa3rr4ucd2" path="res://assets/new assets/cat3.png" id="6_wavyb"]
+[ext_resource type="Texture2D" uid="uid://da021mfwlts6c" path="res://assets/new assets/cat4.png" id="7_igdtg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq5cr"]
 size = Vector2(431, 373)
@@ -33,7 +36,31 @@ animations = [{
 "texture": ExtResource("4_ry43h")
 }],
 "loop": true,
-"name": &"cat!",
+"name": &"cat1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_faous")
+}],
+"loop": true,
+"name": &"cat2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wavyb")
+}],
+"loop": true,
+"name": &"cat3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_igdtg")
+}],
+"loop": true,
+"name": &"cat4",
 "speed": 5.0
 }, {
 "frames": [{
@@ -66,6 +93,6 @@ shape = SubResource("RectangleShape2D_oq5cr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1548334732]
 sprite_frames = SubResource("SpriteFrames_faous")
-animation = &"closed"
+animation = &"cat4"
 
 [connection signal="input_event" from="CharacterBody2D" to="." method="_on_character_body_2d_input_event"]
