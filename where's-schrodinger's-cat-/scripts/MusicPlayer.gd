@@ -7,7 +7,11 @@ var menu_music = preload("res://sounds/23559__djduppy__duppyelectro02_120bpm.wav
 var box_opening_sfx = preload("res://sounds/zapsplat_foley_pouch_velcro_rip_013_97211.mp3")
 var meow = preload("res://sounds/Cat1.mp3")
 var swoosh = preload("res://sounds/woosh.wav")
+<<<<<<< HEAD
 var shaker = preload("res://sounds/ShakerV3.mp3")
+=======
+var buttonSound = preload("res://sounds/531851__tissman__menu-click-2.ogg")
+>>>>>>> e7a3429362ad3d0474686895c2d3afeee2cbb3ac
 @onready var musicPlayer = $MusicController
 @onready var SFXPlayer = $SFXController
 @onready var swooshPlayer = $swooshController
@@ -38,7 +42,14 @@ func play_cat_meow():
 func play_swoosh():
 	swooshPlayer.stream = swoosh
 	swooshPlayer.play()
+<<<<<<< HEAD
 
 func play_shaker():
 	swooshPlayer.stream = shaker
 	swooshPlayer.play()
+=======
+	
+func playButtonSound():
+	SFXPlayer.stream = buttonSound
+	SFXPlayer.play()
+>>>>>>> e7a3429362ad3d0474686895c2d3afeee2cbb3ac
