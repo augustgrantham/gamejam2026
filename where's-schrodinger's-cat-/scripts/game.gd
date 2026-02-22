@@ -52,6 +52,7 @@ func boxClicked(game_box,id):
 	if(!boxSelected):
 		boxSelected = true
 		#shake box
+		AudioController.play_shaker()
 		await game_box.shake_box()
 		
 		AudioController.play_box_opening()
