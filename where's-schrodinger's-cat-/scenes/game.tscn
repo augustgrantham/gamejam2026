@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6me3uidsimna" path="res://scripts/game.gd" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://ckyqmofd2gq6h" path="res://scenes/box.tscn" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://x1pde278o5q7" path="res://assets/new assets/background-gameplay.jpg" id="2_lnu2h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e2o6t"]
 font_size = 63
@@ -14,37 +15,37 @@ script = ExtResource("1_80nbo")
 layer = 3
 follow_viewport_enabled = true
 
-[node name="scoreText" type="Label" parent="CanvasLayer" unique_id=2034230578]
-z_index = 2
-offset_left = -930.0
-offset_top = -506.0
-offset_right = -871.0
-offset_bottom = -447.0
-text = "Score:
-"
-label_settings = SubResource("LabelSettings_e2o6t")
-horizontal_alignment = 1
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2134670554]
+z_index = -2
+offset_left = -958.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 252.0
+scale = Vector2(1.3599457, 1.3599457)
+texture = ExtResource("2_lnu2h")
 
 [node name="scoreLabel" type="Label" parent="CanvasLayer" unique_id=1779332654]
 z_index = 2
-offset_left = -734.0
-offset_top = -501.0
-offset_right = -549.0
-offset_bottom = -324.0
+offset_left = -589.0
+offset_top = -450.0
+offset_right = -404.0
+offset_bottom = -273.0
 text = "0
 "
 label_settings = SubResource("LabelSettings_e2o6t")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1734760689]
-
-[node name="box1" parent="." unique_id=1222013045 instance=ExtResource("2_e2o6t")]
+[node name="box1" parent="CanvasLayer" unique_id=1222013045 instance=ExtResource("2_e2o6t")]
+z_as_relative = false
 position = Vector2(-550, -1)
 
-[node name="box2" parent="." unique_id=405739190 instance=ExtResource("2_e2o6t")]
+[node name="box2" parent="CanvasLayer" unique_id=405739190 instance=ExtResource("2_e2o6t")]
 
-[node name="box3" parent="." unique_id=184713389 instance=ExtResource("2_e2o6t")]
-position = Vector2(550, 2)
+[node name="box3" parent="CanvasLayer" unique_id=184713389 instance=ExtResource("2_e2o6t")]
+position = Vector2(550.0001, 2)
+scale = Vector2(1.0000001, 1.0000001)
 
-[connection signal="box_clicked" from="box1" to="." method="_on_box_1_box_clicked"]
-[connection signal="box_clicked" from="box2" to="." method="_on_box_2_box_clicked"]
-[connection signal="box_clicked" from="box3" to="." method="_on_box_3_box_clicked"]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1734760689]
+
+[connection signal="box_clicked" from="CanvasLayer/box1" to="." method="_on_box_1_box_clicked"]
+[connection signal="box_clicked" from="CanvasLayer/box2" to="." method="_on_box_2_box_clicked"]
+[connection signal="box_clicked" from="CanvasLayer/box3" to="." method="_on_box_3_box_clicked"]
