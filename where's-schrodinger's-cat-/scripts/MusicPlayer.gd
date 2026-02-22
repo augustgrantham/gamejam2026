@@ -15,19 +15,18 @@ var buttonSound = preload("res://sounds/531851__tissman__menu-click-2.ogg")
 @onready var musicPlayer = $MusicController
 @onready var SFXPlayer = $SFXController
 @onready var swooshPlayer = $swooshController
-
+@onready var gameMenuPlayer = $MenuMusicController
 func get_highscore():
 	return highscore
 func set_highscore(score):
 	highscore = score
 func play_menu():
-	
-	if musicPlayer.stream == menu_music: 
-		return # Don't restart if it's already playing
-	musicPlayer.stream = menu_music
-	musicPlayer.play()
+	musicPlayer.stop()
+	gameMenuPlayer.stream = menu_music
+	gameMenuPlayer.play()
 
 func play_game():
+	gameMenuPlayer.stop()
 	musicPlayer.stream = game_music
 	musicPlayer.play()
 

@@ -6,7 +6,7 @@
 script = ExtResource("1_41o6r")
 
 [node name="MusicController" type="AudioStreamPlayer2D" parent="." unique_id=351015946]
-bus = &"Music"
+bus = &"gameMusic"
 
 [node name="SFXController" type="AudioStreamPlayer2D" parent="." unique_id=867369583]
 bus = &"Sound effects"
@@ -14,3 +14,6 @@ bus = &"Sound effects"
 [node name="swooshController" type="AudioStreamPlayer2D" parent="." unique_id=637879465]
 volume_db = 9.732
 bus = &"swoosh bus"
+
+[node name="MenuMusicController" type="AudioStreamPlayer2D" parent="." unique_id=725958583]
+bus = &"menuMusic"
