@@ -69,10 +69,10 @@ anchor_left = 0.43300003
 anchor_top = 0.611
 anchor_right = 0.55600005
 anchor_bottom = 0.68600005
-offset_left = -40.360046
-offset_top = 296.39697
-offset_right = -48.52014
-offset_bottom = 290.92194
+offset_left = -66.36011
+offset_top = 268.39703
+offset_right = -74.5202
+offset_bottom = 262.922
 scale = Vector2(1.42488, 1.42488)
 
 [node name="Button" type="Button" parent="Settings" unique_id=293213626]
@@ -81,13 +81,12 @@ layout_mode = 2
 flat = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Settings/Button" unique_id=1198437685]
-position = Vector2(55.043, 6.247158)
+position = Vector2(73.99192, 34.319695)
 scale = Vector2(0.33724993, 0.33724993)
 texture = ExtResource("3_3vvtq")
 
 [node name="MusicStream" type="AudioStreamPlayer2D" parent="." unique_id=135042541]
 stream = ExtResource("3_wgsso")
-bus = &"Music"
 
 [node name="sfxStream" type="AudioStreamPlayer2D" parent="." unique_id=1370590478]
 bus = &"Sound effects"
