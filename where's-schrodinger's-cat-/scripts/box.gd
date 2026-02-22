@@ -30,3 +30,20 @@ func cat_hehe():
 func closed():
 	anim.play("closed")
 	await anim.animation_finished 
+func shake_box() -> void:
+	var original_pos := global_position
+	var tween := create_tween()
+	var shake_distance := 8.0
+	var shake_time := 0.04
+	var repeats := 6
+
+	for i in range(repeats):
+		var offset := Vector2(
+			randf_range(-shake_distance, shake_distance),
+			randf_range(-shake_distance, shake_distance)
+		)
+		tween.tween_property(self, "global_position", original_pos + offset, shake_time)
+
+	# Return to original position at the end
+	tween.tween_property(self, "global_position", original_pos, shake_time)
+	await tween.finished

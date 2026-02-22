@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://ciu113royav1c" path="res://scripts/mainmenu.gd" id="1_cmhrf"]
 [ext_resource type="Texture2D" uid="uid://bkc7oss8qkd70" path="res://assets/new assets/start-button.png" id="2_r3g3c"]
-[ext_resource type="Texture2D" uid="uid://cglgt5g6kg4h6" path="res://assets/new assets/background-main-menu.jpg" id="2_s5g8n"]
+[ext_resource type="Texture2D" uid="uid://biyxjk8ok7u47" path="res://assets/new assets/background-main-menu.jpg" id="2_s5g8n"]
 [ext_resource type="Texture2D" uid="uid://b5kip5cboprcq" path="res://assets/new assets/credits-button.png" id="3_3vvtq"]
 [ext_resource type="Texture2D" uid="uid://ddbfqxkxkew0r" path="res://assets/new assets/title-new.png" id="3_7yvfd"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="3_wgsso"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7yvfd"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
 
 [node name="menuNode" type="Control" unique_id=653461740]
 layout_mode = 3
@@ -85,6 +89,15 @@ bus = &"Music"
 
 [node name="sfxStream" type="AudioStreamPlayer2D" parent="." unique_id=1370590478]
 bus = &"Sound effects"
+
+[node name="highscoreLabel" type="Label" parent="." unique_id=727269756]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 968.0
+offset_right = 488.0
+offset_bottom = 1056.0
+text = "0"
+label_settings = SubResource("LabelSettings_7yvfd")
 
 [connection signal="pressed" from="CenterContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Settings/Button" to="." method="_on_credits_pressed"]

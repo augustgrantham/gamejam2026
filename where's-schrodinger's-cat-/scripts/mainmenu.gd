@@ -1,7 +1,9 @@
 extends Control
 @onready var click_sound = $sfxStream
+@onready var highscoreLabel = $highscoreLabel
 func _ready():
 	AudioController.play_menu()
+	highscoreLabel.text = str(AudioController.get_highscore())
 # This handles the Start Button
 func _on_start_pressed():
 	click_sound.play()
