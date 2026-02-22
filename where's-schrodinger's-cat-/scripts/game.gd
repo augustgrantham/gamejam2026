@@ -52,6 +52,9 @@ func boxClicked(game_box,id):
 	# makes sure you haven't already picked one this round
 	if(!boxSelected):
 		boxSelected = true
+		#shake box
+		await game_box.shake_box()
+		
 		AudioController.play_box_opening()
 		if (game_box == winning_box_node):
 			await game_box.open_box_animation()
