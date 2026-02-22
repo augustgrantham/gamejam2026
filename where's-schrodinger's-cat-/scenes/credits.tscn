@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cycfpl4xogt5o"]
 
-[ext_resource type="Script" path="res://scripts/credits.gd" id="1_nm7lk"]
+[ext_resource type="Script" uid="uid://d12482yhkto6s" path="res://scripts/credits.gd" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://dwcbktsrawh2x" path="res://sounds/531851__tissman__menu-click-2.ogg" id="2_c1t8d"]
 [ext_resource type="Texture2D" uid="uid://4tw5h73m4rx6" path="res://assets/new assets/background-credits.jpeg" id="3_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://cj7yuioc5sng5" path="res://assets/new assets/back-button.png" id="4_8gwij"]
@@ -29,6 +29,7 @@ offset_left = 265.0
 offset_top = 307.0
 offset_right = 1664.0
 offset_bottom = 887.0
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "Menu Click ~ menu click 2 by Tissman -- https://freesound.org/s/531851/ -- License: Creative Commons 0
 
@@ -36,11 +37,25 @@ Menu Music ~ duppyElectro02_120bpm.wav by djduppy -- https://freesound.org/s/235
 
 Game Music ~ Upbeat Percussion Loop by wellsdesirae -- https://freesound.org/s/845635/ -- License: Attribution NonCommercial 4.0
 
-Cat Meow~ Cat meowing Produced by ZapSplat #
-
 Box Opening~ Small pouch velcro rip 13 Produced by ZapSplat Standard License Agreement
 
-Box moving~ MXL993_Yarstick_Swoosh_4.wav by Wdfourtee https://freesound.org/s/192050/ -- License: Creative Commons 0"
+Box moving~ MXL993_Yarstick_Swoosh_4.wav by Wdfourtee https://freesound.org/s/192050/ -- License: Creative Commons 0
+
+Cat Meow1~ Cat meowing Produced by ZapSplat #
+
+Cat Meow 2~ my voice meow 4.wav by timtube -- https://freesound.org/s/60962/ -- License: Attribution NonCommercial 4.0
+
+Cat Meow 3 ~ Senior Cat Meow by Lukey1028 -- https://freesound.org/s/732519/ -- License: Creative Commons 0
+
+Cat Meow 4~ Kitty Meow by Npeo -- https://freesound.org/s/203121/ -- License: Attribution 4.0
+
+Cat Meow 5~ Cat (Gato) Meowing by bagenzo -- https://freesound.org/s/714179/ -- License: Creative Commons 0
+
+Devopment Team:
+~August Grantham 
+~Sarah Merino
+~Sydney Belter
+~Blake Roettgen"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=821251280]
 layout_mode = 0
