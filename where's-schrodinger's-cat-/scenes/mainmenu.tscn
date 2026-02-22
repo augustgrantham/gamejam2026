@@ -81,7 +81,7 @@ layout_mode = 2
 flat = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Settings/Button" unique_id=1198437685]
-position = Vector2(71.99999, 32.999985)
+position = Vector2(55.043, 6.247158)
 scale = Vector2(0.33724993, 0.33724993)
 texture = ExtResource("3_3vvtq")
 

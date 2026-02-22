@@ -5,25 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://4tw5h73m4rx6" path="res://assets/new assets/background-credits.jpeg" id="3_2fbfq"]
 [ext_resource type="Texture2D" uid="uid://cj7yuioc5sng5" path="res://assets/new assets/back-button.png" id="4_8gwij"]
 
-[sub_resource type="FontFile" id="FontFile_2ckv8"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_c1t8d"]
-font_color = Color(0, 0, 0, 1)
-
 [node name="Control" type="Control" unique_id=311586421]
 layout_mode = 3
 anchors_preset = 15
@@ -42,23 +23,13 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("3_2fbfq")
 
-[node name="Label" type="Label" parent="background" unique_id=69889771]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.17500001
-anchor_top = 0.252
-anchor_right = 0.73700005
-anchor_bottom = 0.637
-offset_left = -85.00003
-offset_top = 11.839996
-offset_right = 264.95996
-offset_bottom = 162.03998
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0.91764706, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 6
-theme_override_fonts/font = SubResource("FontFile_2ckv8")
-theme_override_font_sizes/font_size = 28
+[node name="RichTextLabel" type="RichTextLabel" parent="background" unique_id=1162776413]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 307.0
+offset_right = 1664.0
+offset_bottom = 887.0
+bbcode_enabled = true
 text = "Menu Click ~ menu click 2 by Tissman -- https://freesound.org/s/531851/ -- License: Creative Commons 0
 
 Menu Music ~ duppyElectro02_120bpm.wav by djduppy -- https://freesound.org/s/23559/ -- License: Attribution 4.0
@@ -70,9 +41,6 @@ Cat Meow~ Cat meowing Produced by ZapSplat #
 Box Opening~ Small pouch velcro rip 13 Produced by ZapSplat Standard License Agreement
 
 Box moving~ MXL993_Yarstick_Swoosh_4.wav by Wdfourtee https://freesound.org/s/192050/ -- License: Creative Commons 0"
-label_settings = SubResource("LabelSettings_c1t8d")
-vertical_alignment = 1
-autowrap_mode = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=821251280]
 layout_mode = 0
