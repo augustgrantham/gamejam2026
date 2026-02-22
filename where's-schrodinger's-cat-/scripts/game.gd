@@ -5,13 +5,15 @@ var points = 0
 var boxWithCat = 0
 var boxSelected = false
 var column_positions = [-550, 0, 550]
-var round = 1
+var round = 0
 var duration = 0.8
+var otherColors = 1
 @onready var scoreLabel = $CanvasLayer/scoreLabel
 @onready var box1 = $CanvasLayer/box1
 @onready var box2 = $CanvasLayer/box2
 @onready var box3 = $CanvasLayer/box3
 @onready var boxes = [box1,box2,box3]
+@onready var background = $CanvasLayer/TextureRect
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	boxSelected = true
@@ -22,6 +24,10 @@ func _process(delta: float) -> void:
 	pass
 
 func startRound():
+	round += 1
+	if(round > 5):
+		otherColors -= .1
+	background.self_modulate = Color(1,otherColors,otherColors)
 	boxSelected = true
 	box1.closed()
 	box2.closed()
@@ -65,8 +71,6 @@ func boxClicked(game_box,id):
 			scoreLabel.text = str(points)
 			print("yipee!!")
 			await get_tree().create_timer(2.0).timeout
-
-			round += 1
 			duration += 0.2
 			startRound()
 		else:
