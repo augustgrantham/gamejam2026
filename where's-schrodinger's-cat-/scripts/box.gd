@@ -24,8 +24,16 @@ func open_box_animation():
 func empty_box_animation():
 	anim.play("empty_box")
 	await anim.animation_finished 
-func cat_hehe():
-	anim.play("cat!")
+func cat_hehe(cat):
+	match(cat):
+		1:
+			anim.play("cat1")
+		2:
+			anim.play("cat2")
+		3:
+			anim.play("cat3")
+		4:
+			anim.play("cat4")	
 	await anim.animation_finished 
 func closed():
 	anim.play("closed")
