@@ -7,11 +7,10 @@ var boxSelected = false
 var column_positions = [-550, 0, 550]
 var round = 1
 var duration = 0.8
-
 @onready var scoreLabel = $CanvasLayer/scoreLabel
-@onready var box1 = $'box1'
-@onready var box2 = $'box2'
-@onready var box3 = $'box3'
+@onready var box1 = $CanvasLayer/box1
+@onready var box2 = $CanvasLayer/box2
+@onready var box3 = $CanvasLayer/box3
 @onready var boxes = [box1,box2,box3]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -72,7 +71,8 @@ func boxClicked(game_box,id):
 			game_box.empty_box_animation()
 			winning_box_node.cat_hehe()
 			boxSelected = true
-
+			if(points > AudioController.get_highscore()):
+				AudioController.set_highscore(points)
 			await get_tree().create_timer(2.0).timeout
 			print("you lost dummy")
 			get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
